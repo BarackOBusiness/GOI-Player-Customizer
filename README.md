@@ -1,0 +1,1 @@
+Player cosmetic customization mod for Getting Over it, otherwise known as GOI
