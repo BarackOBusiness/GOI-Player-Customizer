@@ -32,7 +32,7 @@ bld/
 [Ll]ogs/
 
 # Libraries
-net45/*
+[n]et45/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
