@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 namespace Player_Customizer
 {
-    [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
+    [BepInPlugin("GOI.plugins.playerCustomizer", "Player Customizer", PluginInfo.PLUGIN_VERSION)]
     public class PlayerCustomizer : BaseUnityPlugin
     {
 
