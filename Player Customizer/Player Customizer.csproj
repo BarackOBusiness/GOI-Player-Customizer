@@ -1,19 +1,33 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net46</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Player_Customizer</AssemblyName>
     <Description>The all in one player cosmetic customization mod for Getting Over It</Description>
     <Version>1.0.3</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <LangVersion>9.0</LangVersion>
+    <LangVersion>10.0</LangVersion>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='B5'">
+    <OutputPath>Release/PlayerCustomizer.BepInEx5</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='B6'">
+    <OutputPath>Release/PlayerCustomizer.BepInEx6</OutputPath>
+  </PropertyGroup>
+
+
+  <ItemGroup Condition="'$(Configuration)'=='B5'">
+    <PackageReference Include="BepInEx.Core" Version="5.*" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)'=='B6'">
+    <PackageReference Include="BepInEx.Unity" Version="6.0.0-pre.1" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
-    <PackageReference Include="BepInEx.Core" Version="5.*" />
     <PackageReference Include="BepInEx.PluginInfoProps" Version="1.*" />
-    <PackageReference Include="UnityEngine.Modules" Version="2020.3.6" IncludeAssets="compile" />
+    <PackageReference Include="UnityEngine.Modules" Version="2020.3.25" IncludeAssets="compile" />
   </ItemGroup>
   
   <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
