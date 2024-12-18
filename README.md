@@ -14,8 +14,4 @@ Running the game with the plugin installed will generate the necessary config fi
 You can edit the `GOI.plugins.playerCustomizer.cfg` file in that folder as per your liking, there are 3 materials of choice for each component of the player, and you can select any custom path of choice for your images
 
 ## Building from source & development
-To make contributions to the plugin, after cloning the repository, create a `lib` folder in the `Player Customizer` and inside of that, a `net45` folder.  In this folder you put all the referenced libraries which can be found in the game data folder.
-
-Of which there are only 2:
-* UnityEngine.dll
-* UnityEngine.CoreModule.dll
+All necessary libs should be fetched during a compilation of the project, to do so, use `dotnet build` with the -c parameter specifying either `B5` or `B6` for a BepInEx 5 or 6 build respectively.
