@@ -65,66 +65,6 @@ namespace Player_Customizer
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
         }
 
-        void Update()
-        {
-            try
-            {
-                if (GameObject.Find("Player"))
-                {
-                    Transform player = GameObject.Find("Player").transform;
-
-                    if (EnabledStatus[0].Value != lastStatus[0]) {
-                        MaterialLoader(player.Find("Pot/Mesh").gameObject, 0);
-                    }
-                    if (EnabledStatus[1].Value != lastStatus[1]) {
-                        EyeLoader();
-                        MaterialLoader(player.Find("dude/Body").gameObject, 1);
-                    }
-                    if (EnabledStatus[2].Value != lastStatus[2]) {
-                        MaterialLoader(player.Find("handle/Mesh").gameObject, 2);
-                    }
-                    if (EnabledStatus[3].Value != lastStatus[3]) {
-                        MaterialLoader(player.Find("Hub/Slider/Handle/PoleMiddle/climbinghammer_remap/RetopoGroup1").gameObject, 3);
-                    }
-                    
-
-                    if (Paths[0].Value != lastPaths[0])
-                    {
-                        MaterialLoader(player.Find("Pot/Mesh").gameObject, 0);
-                    }
-                    if (Paths[1].Value != lastPaths[1])
-                    {
-                        EyeLoader();
-                        MaterialLoader(player.Find("dude/Body").gameObject, 1);
-                    }
-                    if (Paths[2].Value != lastPaths[2])
-                    {
-                        MaterialLoader(player.Find("handle/Mesh").gameObject, 2);
-                    }
-                    if (Paths[3].Value != lastPaths[3])
-                    {
-                        MaterialLoader(player.Find("Hub/Slider/Handle/PoleMiddle/climbinghammer_remap/RetopoGroup1").gameObject, 3);
-                    }
-                    
-
-                    if (Mat[0].Value != lastMat[0]) {
-                        MaterialLoader(player.Find("Pot/Mesh").gameObject, 0);
-                    }
-                    if (Mat[1].Value != lastMat[1]) {
-                        MaterialLoader(player.Find("dude/Body").gameObject, 1);
-                    }
-                    if (Mat[2].Value != lastMat[2]) {
-                        MaterialLoader(player.Find("handle/Mesh").gameObject, 2);
-                    }
-                    if (Mat[3].Value != lastMat[3]) {
-                        MaterialLoader(player.Find("Hub/Slider/Handle/PoleMiddle/climbinghammer_remap/RetopoGroup1").gameObject, 3);
-                    }
-
-                }
-            }
-            catch (Exception ex) { Debug.LogException(ex); }
-        }
-
         void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
             try {
